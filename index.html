@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sandhya ❤️ Be My Valentine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="mainPage" class="card">
+    <h1>Hi My Dear Sandhya 💕</h1>
+    <h2>Will You Be My Valentine?</h2>
+    <p>If Not, try to click on No 😏</p>
+
+    <div class="buttons">
+        <button id="yesBtn" class="yes-btn">Yes ❤️</button>
+        <button id="noBtn" class="no-btn">No 😅</button>
+    </div>
+</div>
+
+<div id="lovePage" class="card" style="display:none;">
+    <h1>Sandhya ❤️</h1>
+
+    <div class="image-slot">
+        <img src="mithun.jpeg" alt="Sandhya">
+    </div>
+
+    <h2>You Said Yes 💍✨</h2>
+
+    <p>
+        This is the beginning of something beautiful.
+        Every heartbeat, every smile, every dream 
+        I want them all with you.</p>
+        <h4>You are mine forever...💖</h4>
+    <div class="back"></div>
+    <button id="backbtn" class="back-btn">Back</button>
+
+</div>
+<div id="hearts-bg"></div>
+<script>
+    const heartContainer = document.getElementById("hearts-bg"); 
+function createHeart() {
+     const heart = document.createElement("div"); 
+     heart.classList.add("heart"); 
+     heart.innerHTML = "💖";
+      const size = Math.random() * 30 + 20;
+       heart.style.fontSize = size + "px";
+        heart.style.left = Math.random() * 100 + "vw"; 
+        heart.style.bottom = "-30px"; 
+        const duration = Math.random() * 5 + 5; 
+        heart.style.animationDuration = duration + "s";
+         heartContainer.appendChild(heart);
+          setTimeout(() => { heart.remove(); 
+          },duration * 1000);
+         } 
+         setInterval(createHeart, 400);
+</script>
+
+
+<audio id="bgMusic" src="mithun.mp3" loop></audio>
+
+<script src="script.js"></script>
+
+</body>
